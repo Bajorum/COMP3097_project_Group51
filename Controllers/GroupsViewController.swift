@@ -64,6 +64,7 @@ class GroupsViewController: UIViewController {
         updateGroups()
     }
     
+    //This function is used to update the groups
     private func updateGroups() {
         groups = dataManager.getGroups()
         tableView.reloadData()
@@ -79,6 +80,7 @@ class GroupsViewController: UIViewController {
         
         orderButton.isEnabled = !nonEmptyGroups.isEmpty
     }
+    
     
     @objc private func addGroupTapped() {
         let alertController = UIAlertController(title: "Create New Group", message: nil, preferredStyle: .alert)
@@ -121,7 +123,7 @@ class GroupsViewController: UIViewController {
             return
         }
         
-        // Calculate total cost
+        // Calculates the total cost
         var totalCost: Double = 0
         for groupName in nonEmptyGroups {
             totalCost += dataManager.calculateTotalWithTax(groupName: groupName)
