@@ -16,9 +16,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Food Selection App" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dEe-aW-tVA">
-                                <rect key="frame" x="16" y="412.66666666666669" width="361" height="27"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="SplashIcon" translatesAutoresizingMaskIntoConstraints="NO" id="rYv-0A-dZR">
+                                <rect key="frame" x="96.666666666666686" y="326" width="200" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="G3S-oh-aYu"/>
+                                    <constraint firstAttribute="height" constant="200" id="L6x-nY-5ZJ"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Food Selection" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Qp-y4-hTu">
+                                <rect key="frame" x="104.00000000000001" y="546" width="185.33333333333337" height="33.666666666666629"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -26,9 +33,10 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="dEe-aW-tVA" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="IQY-9g-Rgj"/>
-                            <constraint firstItem="dEe-aW-tVA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="Siz-tV-fQA"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dEe-aW-tVA" secondAttribute="trailing" constant="16" id="rTf-pd-6t2"/>
+                            <constraint firstItem="1Qp-y4-hTu" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="8Zh-Uk-nug"/>
+                            <constraint firstItem="rYv-0A-dZR" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="T3i-8M-Nqt"/>
+                            <constraint firstItem="1Qp-y4-hTu" firstAttribute="top" secondItem="rYv-0A-dZR" secondAttribute="bottom" constant="20" id="k7d-jb-OKS"/>
+                            <constraint firstItem="rYv-0A-dZR" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="zSk-p3-pma"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -38,6 +46,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="SplashIcon" width="1024" height="1024"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
