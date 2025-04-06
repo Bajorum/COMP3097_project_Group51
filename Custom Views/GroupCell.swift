@@ -1,5 +1,6 @@
 import UIKit
 
+//Updated and fixed errors in the group cell feature. 
 protocol GroupCellDelegate: AnyObject {
     func didTapOptionsButton(for groupName: String)
     func didTapRemoveButton(for foodItem: FoodItem, in groupName: String)
