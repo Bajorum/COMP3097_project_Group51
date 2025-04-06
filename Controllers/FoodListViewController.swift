@@ -37,7 +37,6 @@ class FoodListViewController: UIViewController {
     }
 }
 
-// MARK: - UITableViewDataSource
 extension FoodListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return dataManager.foodItems.count
@@ -56,19 +55,16 @@ extension FoodListViewController: UITableViewDataSource {
     }
 }
 
-// MARK: - UITableViewDelegate
 extension FoodListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
     }
 }
 
-// MARK: - FoodItemCellDelegate
 extension FoodListViewController: FoodItemCellDelegate {
     func didTapAddButton(for foodItem: FoodItem) {
         let alertController = UIAlertController(title: "Select Group", message: "Choose a group to add this item to", preferredStyle: .actionSheet)
         
-        // Add actions for each existing group
         for group in dataManager.getGroups() {
             let action = UIAlertAction(title: group, style: .default) { [weak self] _ in
                 self?.dataManager.addToGroup(foodItem, groupName: group)
@@ -76,17 +72,14 @@ extension FoodListViewController: FoodItemCellDelegate {
             alertController.addAction(action)
         }
         
-        // Add "Create New Group" option
         let createAction = UIAlertAction(title: "Create New Group", style: .default) { [weak self] _ in
             self?.showCreateGroupDialog(for: foodItem)
         }
         alertController.addAction(createAction)
         
-        // Add cancel option
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel)
         alertController.addAction(cancelAction)
         
-        // Present the action sheet
         present(alertController, animated: true)
     }
     

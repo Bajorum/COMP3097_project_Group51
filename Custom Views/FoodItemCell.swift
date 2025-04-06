@@ -53,7 +53,6 @@ class FoodItemCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
 
-    //Updated the setup Views 
     private func setupViews() {
         selectionStyle = .none
         backgroundColor = ThemeConstants.backgroundColor
